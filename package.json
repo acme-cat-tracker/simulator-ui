@@ -1,5 +1,5 @@
 {
-  "name": "@nordicsemiconductor/asset-tracker-cloud-device-ui",
+  "name": "@acme/simulator-ui",
   "version": "0.0.0-development",
   "description": "Web app to simulate a Cat Tracker",
   "scripts": {
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NordicSemiconductor/asset-tracker-cloud-device-ui-js.git"
+    "url": "git+https://github.com/acme-cat-tracker/simulator-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/NordicSemiconductor/asset-tracker-cloud-device-ui-js/issues"
+    "url": "https://github.com/acme-cat-tracker/simulator-ui/issues"
   },
-  "homepage": "https://github.com/NordicSemiconductor/asset-tracker-cloud-device-ui-js#readme",
+  "homepage": "https://github.com/acme-cat-tracker/simulator-ui#readme",
   "keywords": [
     "Cloud",
     "IoT",
