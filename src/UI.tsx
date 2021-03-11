@@ -154,7 +154,12 @@ export const UI = ({ endpoint }: { endpoint: URL }) => {
 				{error !== undefined && (
 					<Alert color="danger">{JSON.stringify(error)}</Alert>
 				)}
-				<UpdateUI endpoint={endpoint} updateReported={u} sendMessage={m} />
+				<UpdateUI
+					endpoint={endpoint}
+					updateReported={u}
+					sendMessage={m}
+					queueUpdate={queueUpdate}
+				/>
 			</Main>
 		</>
 	)

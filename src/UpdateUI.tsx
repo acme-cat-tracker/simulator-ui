@@ -5,6 +5,7 @@ import type { Update } from './updateReported'
 import styled from 'styled-components'
 import { AccelerometerSlider } from './AccelerometerSlider'
 import { Device } from './Device'
+import { HeartRateMonitor } from './HeartRateMonitor'
 
 const DeviceInfoList = styled.dl`
 	dd + dt {
@@ -16,10 +17,12 @@ export const UpdateUI = ({
 	endpoint,
 	updateReported: u,
 	sendMessage: m,
+	queueUpdate
 }: {
 	endpoint: URL
 	updateReported: (u: Update) => void
 	sendMessage: (m: Update) => void
+	queueUpdate: (u: Update) => void
 }) => {
 	const [batteryVoltage, setBatteryVoltage] = useState(0)
 	const [accuracy, setAccuracy] = useState(0)
@@ -41,6 +44,7 @@ export const UpdateUI = ({
 						<dd>{deviceId}</dd>
 						<dt>Config</dt>
 						<dd>{JSON.stringify(config)}</dd>
+						<HeartRateMonitor queueUpdate={queueUpdate} />
 						<dt>RSRP: -{rsrp}</dt>
 						<dd>
 							<Slider
